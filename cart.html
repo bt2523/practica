@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кошик — Jolly House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&subset=cyrillic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">Jólly.<small>HOUSE</small></a>
+    <button class="burger" aria-label="Меню">☰</button>
+    <nav class="nav">
+      <a href="index.html#about">Про нас</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="index.html#collection">Колекція</a>
+      <a href="index.html#contact">Контакти</a>
+      <a href="cart.html" class="cart-link active">Кошик <span data-cart-count>0</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="eyebrow">Кошик</div>
+    <h1 class="title" id="cartTitle">Ваш кошик.</h1>
+  </div>
+</div>
+
+<main class="container" style="padding:50px 0 90px">
+
+  <!-- Порожній кошик -->
+  <div id="cartEmpty" class="empty" style="display:none">
+    <p style="font-size:20px;margin-bottom:24px">У кошику поки що порожньо.</p>
+    <a href="catalog.html" class="btn">Перейти до каталогу</a>
+  </div>
+
+  <!-- Кошик + оформлення -->
+  <div class="cart-layout" id="cartLayout">
+    <section class="cart-items" style="padding:0">
+      <div id="cartList"></div>
+      <button class="link-btn" id="clearCart">Очистити кошик</button>
+    </section>
+
+    <aside class="checkout" style="padding:0">
+      <form id="orderForm" novalidate>
+        <h3>Оформлення замовлення</h3>
+
+        <div class="f-group">
+          <label for="oName">Імʼя та прізвище *</label>
+          <input type="text" id="oName" autocomplete="name">
+          <div class="field-err" data-for="oName"></div>
+        </div>
+        <div class="f-group">
+          <label for="oPhone">Телефон *</label>
+          <input type="text" id="oPhone" placeholder="+380 50 123 45 67" autocomplete="tel">
+          <div class="field-err" data-for="oPhone"></div>
+        </div>
+        <div class="f-group">
+          <label for="oEmail">E-mail *</label>
+          <input type="text" id="oEmail" placeholder="name@example.com" autocomplete="email">
+          <div class="field-err" data-for="oEmail"></div>
+        </div>
+        <div class="f-group">
+          <label for="oCity">Місто *</label>
+          <input type="text" id="oCity" autocomplete="address-level2">
+          <div class="field-err" data-for="oCity"></div>
+        </div>
+
+        <div class="f-group">
+          <label for="oDelivery">Доставка *</label>
+          <select id="oDelivery">
+            <option value="np">Нова пошта — відділення (200 грн)</option>
+            <option value="courier">Кур'єр за адресою (320 грн)</option>
+            <option value="pickup">Самовивіз з бутика (безкоштовно)</option>
+          </select>
+        </div>
+        <div class="f-group" id="addressGroup">
+          <label for="oAddress" id="addressLabel">Номер відділення *</label>
+          <input type="text" id="oAddress">
+          <div class="field-err" data-for="oAddress"></div>
+        </div>
+
+        <div class="f-group">
+          <label for="oPayment">Оплата *</label>
+          <select id="oPayment">
+            <option value="card">Карткою онлайн</option>
+            <option value="cod">Післяплата при отриманні</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label for="oComment">Коментар до замовлення</label>
+          <textarea id="oComment" rows="3"></textarea>
+        </div>
+
+        <div class="sum">
+          <div><span>Товари</span><b id="sumItems">0 грн</b></div>
+          <div><span>Доставка</span><b id="sumDelivery">0 грн</b></div>
+          <div class="grand"><span>Разом</span><b id="sumTotal">0 грн</b></div>
+          <div class="note" id="freeNote"></div>
+        </div>
+
+        <button type="submit" class="btn" style="width:100%;justify-content:center">Підтвердити замовлення</button>
+      </form>
+    </aside>
+  </div>
+
+  <!-- Успішне замовлення -->
+  <div id="orderDone" class="done" style="display:none"></div>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Навігація</h4>
+        <div class="links"><a href="index.html#about">Про нас</a><a href="catalog.html">Каталог</a><a href="index.html#collection">Колекція</a></div>
+      </div>
+      <div>
+        <a href="index.html" class="logo beige">Jólly.<small>HOUSE</small></a>
+        <p style="margin-top:26px">Jolly House — ваш магазин дизайнерського та зручного одягу на будь-яку нагоду. Ми використовуємо лише натуральні тканини та приділяємо увагу деталям.</p>
+      </div>
+      <div>
+        <h4>Соцмережі</h4>
+        <div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Twitter">t</a><a href="#" aria-label="YouTube">▶</a></div>
+        <div class="contact-list">
+          <div>5th Ave, Нью-Йорк, США</div>
+          <div><a href="tel:+12125550123">+1 (212) 555-0123</a></div>
+          <div><a href="mailto:hello@jollyhouse.com">hello@jollyhouse.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2026 Jolly House. Усі права захищено.</div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/store.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

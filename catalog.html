@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — Jolly House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&subset=cyrillic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">Jólly.<small>HOUSE</small></a>
+    <button class="burger" aria-label="Меню">☰</button>
+    <nav class="nav">
+      <a href="index.html#about">Про нас</a>
+      <a href="catalog.html" class="active">Каталог</a>
+      <a href="index.html#collection">Колекція</a>
+      <a href="index.html#contact">Контакти</a>
+      <a href="cart.html" class="cart-link">Кошик <span data-cart-count>0</span></a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="eyebrow">Каталог</div>
+    <h1 class="title">Дизайнерський одяг на будь-який смак.</h1>
+    <div class="cat-tabs" id="catTabs">
+      <button class="tab active" data-cat="all">Усе</button>
+      <button class="tab" data-cat="clothing">Одяг</button>
+      <button class="tab" data-cat="footwear">Взуття</button>
+      <button class="tab" data-cat="accessories">Аксесуари</button>
+    </div>
+  </div>
+</div>
+
+<main class="container catalog-layout">
+  <!-- ФІЛЬТРИ -->
+  <aside class="filters" id="filters">
+    <h3>Фільтри</h3>
+
+    <div class="f-group">
+      <label for="fSearch">Пошук</label>
+      <input type="text" id="fSearch" placeholder="Назва, бренд або категорія">
+    </div>
+
+    <div class="f-group">
+      <span class="f-label">Стать</span>
+      <div class="seg" id="fGender">
+        <button data-g="all" class="active">Усі</button>
+        <button data-g="men">Чоловічий</button>
+        <button data-g="women">Жіночий</button>
+      </div>
+    </div>
+
+    <div class="f-group">
+      <span class="f-label">Бренд</span>
+      <div class="check-list" id="fBrands"></div>
+    </div>
+
+    <div class="f-group">
+      <label for="fSize">Розмір</label>
+      <select id="fSize"><option value="">Будь-який розмір</option></select>
+    </div>
+
+    <div class="f-group">
+      <label for="fColor">Колір</label>
+      <select id="fColor"><option value="">Будь-який колір</option></select>
+    </div>
+
+    <div class="f-group">
+      <label for="fMaterial">Матеріал</label>
+      <select id="fMaterial"><option value="">Будь-який матеріал</option></select>
+    </div>
+
+    <div class="f-group">
+      <span class="f-label">Ціна, грн</span>
+      <div class="price-row">
+        <input type="number" id="fMin" placeholder="Від" min="0">
+        <input type="number" id="fMax" placeholder="До" min="0">
+      </div>
+    </div>
+
+    <button class="btn small outline plain" id="fReset" style="width:100%;justify-content:center">Скинути фільтри</button>
+  </aside>
+
+  <!-- РЕЗУЛЬТАТИ -->
+  <div>
+    <div class="toolbar">
+      <button class="btn small outline plain filter-toggle" id="filterToggle">☰ Фільтри</button>
+      <div class="found" id="foundText"></div>
+      <select id="sortSelect" aria-label="Сортування">
+        <option value="default">Сортування: за замовчуванням</option>
+        <option value="asc">Спочатку найдешевші</option>
+        <option value="desc">Спочатку найдорожчі</option>
+        <option value="name">За назвою А–Я</option>
+      </select>
+    </div>
+
+    <div class="extremes" id="extremes"></div>
+    <div class="grid-products" id="grid"></div>
+  </div>
+</main>
+
+<!-- Деталі товару -->
+<div class="overlay" id="detailOverlay">
+  <div class="modal" id="detailModal"></div>
+</div>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Навігація</h4>
+        <div class="links"><a href="index.html#about">Про нас</a><a href="catalog.html">Каталог</a><a href="index.html#collection">Колекція</a></div>
+      </div>
+      <div>
+        <a href="index.html" class="logo beige">Jólly.<small>HOUSE</small></a>
+        <p style="margin-top:26px">Jolly House — ваше місце для дизайнерського та зручного одягу на будь-яку нагоду. Ми використовуємо лише натуральні тканини та приділяємо велику увагу деталям.</p>
+      </div>
+      <div>
+        <h4>Соцмережі</h4>
+        <div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Twitter">t</a><a href="#" aria-label="YouTube">▶</a></div>
+        <div class="contact-list">
+          <div>5-та авеню, Нью-Йорк, США</div>
+          <div><a href="tel:+12125550123">+1 (212) 555-0123</a></div>
+          <div><a href="mailto:hello@jollyhouse.com">hello@jollyhouse.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2026 Jolly House. Усі права захищено.</div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/store.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/catalog.js"></script>
+</body>
+</html>

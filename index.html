@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jolly House — Дизайнерський одяг</title>
+  <meta name="description" content="Jolly House — ваше місце для дизайнерського та зручного одягу на будь-яку нагоду.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&subset=cyrillic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">Jólly.<small>HOUSE</small></a>
+    <button class="burger" aria-label="Меню">☰</button>
+    <nav class="nav">
+      <a href="#about">Про нас</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="#collection">Колекція</a>
+      <a href="#contact">Контакти</a>
+      <a href="cart.html" class="cart-link">Кошик <span data-cart-count>0</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero" style="background-image:url('https://unsplash.com/photos/mZj8rC-B-Io/download?force=true&w=1800')">
+  <div class="container">
+    <div class="hero-card">
+      <div class="eyebrow">Дизайнерський одяг</div>
+      <h1 class="title">Ваш новий стиль на кожен день.</h1>
+      <p>Jolly House — ваше місце для дизайнерського та зручного одягу на будь-яку нагоду.</p>
+      <div class="btn-row" style="margin-top:44px">
+        <a href="catalog.html" class="btn">Купити</a>
+        <a href="#about" class="btn outline plain">Про нас</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <div class="photo-main"><img src="https://unsplash.com/photos/8D2M93YQQZY/download?force=true&w=1200" alt="Стиль Jolly House" onerror="imgFail(this)"></div>
+      <div class="quote">
+        <div class="quote-mark">“</div>
+        <p>«Мені завжди було важко купувати одяг на кожен день. Тому разом із Лінді ми вирішили створити власний бренд.»</p>
+        <cite>— Йоганна Інсбрук</cite>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="eyebrow">Про нас</div>
+      <h2 class="title">Комфорт і якість — понад усе.</h2>
+      <p>Йоганна Інсбрук і Лінда Копперфілд завжди мріяли про зручний жіночий одяг, який виглядав би доречно за будь-яких обставин.</p>
+      <p>Так з’явився бренд Jolly House — бренд для жінок, які люблять почуватися впевнено, привабливо та стильно в будь-якій ситуації. Ми використовуємо лише натуральні тканини та приділяємо велику увагу деталям, що створюють різницю.</p>
+      <div class="photo-sm"><img src="https://unsplash.com/photos/uZb__Yiwjx4/download?force=true&w=900" alt="Біла блуза та піджак" onerror="imgFail(this)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <div class="container why-grid">
+    <div class="why-img"><img src="https://unsplash.com/photos/pNMH4SDf8us/download?force=true&w=1200" alt="Образ Jolly House" onerror="imgFail(this)"></div>
+    <div class="why-text">
+      <div class="eyebrow">Чому ми</div>
+      <h2 class="title">Що ви полюбите в Jolly House.</h2>
+      <p class="lead" style="color:#555">Ми створюємо кожен образ для вас з великою любов’ю та турботою.</p>
+      <h3 class="sub">Бренд Jolly — це:</h3>
+      <ul class="checks">
+        <li>Капсульні колекції, які можна носити на будь-яку нагоду;</li>
+        <li>Лише якісні та екологічні матеріали;</li>
+        <li>Великий вибір одягу на будь-який смак і розмір.</li>
+      </ul>
+      <p>Ми знаємо головну проблему всіх жінок — повна шафа одягу, а вдягнути нічого. Тому ми розробляємо капсульні колекції, де речі добре поєднуються між собою. Їх також можна змішувати, створюючи нові чудові образи!</p>
+      <div class="btn-row" style="margin-top:36px"><a href="catalog.html" class="btn small">Дізнатися більше</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG CATEGORIES -->
+<section id="catalog">
+  <div class="container center">
+    <div class="eyebrow">Каталог</div>
+    <h2 class="title">Дизайнерський одяг на будь-який смак.</h2>
+    <p class="lead">Ми створюємо модний одяг, готовий до носіння. Ми любимо прості образи та ділимося з вами своїм баченням.</p>
+    <div class="cards-3" id="categoryCards" style="text-align:left"></div>
+  </div>
+</section>
+
+<!-- ACCESSORIES -->
+<section>
+  <div class="container acc-grid">
+    <div>
+      <div class="eyebrow">Аксесуари</div>
+      <h2 class="title">Потішіть себе новими аксесуарами.</h2>
+      <p class="lead" style="color:#555">Ми створюємо аксесуари, які ідеально пасують до образів.</p>
+      <p class="lead" style="margin-top:34px;font-size:15px">Ваш образ не буде завершеним без аксесуарів. Ми створюємо гарні та витончені аксесуари, що підкреслюють вашу природну красу.</p>
+      <div class="feat">
+        <svg viewBox="0 0 48 48"><path d="M14 20c0-7 4-14 10-14s10 7 10 14"/><rect x="9" y="20" width="30" height="22" rx="4"/><path d="M9 30h30"/><rect x="20" y="28" width="8" height="6" rx="1"/></svg>
+        <div><h4>Шкіряні сумки</h4><p>Шопери, кросбоді, сумки-сатчели та інші сумки чекають на вас в наших онлайн- та офлайн-магазинах.</p></div>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 48 48"><path d="M8 32c0-10 6-20 16-20s16 10 16 20"/><ellipse cx="24" cy="34" rx="19" ry="6"/></svg>
+        <div><h4>Окуляри та капелюхи</h4><p>Класична оправа чи солом’яний капелюх? Обирайте те, що найкраще пасує до нагоди та вашого стилю.</p></div>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 48 48"><path d="M10 40V18M16 40V12M22 40V16M28 40V22M10 40h18M8 34h22"/><path d="M34 40V18M40 40V12M46 40V20" opacity=".0"/></svg>
+        <div><h4>Гаманці та ремені</h4><p>Невеликі шкіряні вироби, що завершують образ. Шукайте ці аксесуари в нашому магазині!</p></div>
+      </div>
+      <div class="btn-row" style="margin-top:34px"><a href="catalog.html?category=accessories" class="btn small">Усі аксесуари</a></div>
+    </div>
+    <div class="acc-img"><img src="https://unsplash.com/photos/XHqTv6E5YDU/download?force=true&w=1200" alt="Аксесуари" onerror="imgFail(this)"></div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section>
+  <div class="container center">
+    <div class="eyebrow">Історія</div>
+    <h2 class="title">Моменти, важливі для нас.</h2>
+    <p class="lead">Кілька слів про те, як створювався й розвивався наш бренд дизайнерського одягу.</p>
+    <div class="history-grid" style="margin-left:auto;margin-right:auto">
+      <div class="h-card"><div class="h-year">1997</div><h3>Початок</h3><hr><p>Йоганна зустріла Лінду, і разом вони вирішили створити модний бренд.</p></div>
+      <div class="h-card"><div class="h-year">2001</div><h3>Згадка у Vogue</h3><hr><p>Нас відзначили як «Вибір редактора весни–літа 2001».</p></div>
+      <div class="h-card"><div class="h-year">2019</div><h3>Перший офлайн-магазин</h3><hr><p>У 2019 році ми відкрили наш перший бутик на 5-й авеню в Нью-Йорку.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPRING BANNER -->
+<section class="banner">
+  <div class="container">
+    <div>
+      <div class="eyebrow">Тренд</div>
+      <h2 class="title">Весняна колекція.</h2>
+      <div class="btn-row" style="margin-top:36px">
+        <a href="#collection" class="btn small">Дізнатися більше</a>
+        <a href="catalog.html" class="btn small outline">Купити</a>
+      </div>
+    </div>
+    <img class="banner-img" src="https://unsplash.com/photos/vep8gaDqRxY/download?force=true&w=1200" alt="Весняна колекція" onerror="imgFail(this)">
+  </div>
+</section>
+
+<!-- COLLECTION CAROUSEL -->
+<section id="collection">
+  <div class="container center">
+    <div class="eyebrow">Колекція</div>
+    <h2 class="title">Оберіть свій ідеальний образ.</h2>
+    <p class="lead">Ознайомтеся з нашою новою капсульною колекцією та додайте улюблені речі до кошика!</p>
+    <div class="carousel" style="text-align:left">
+      <button class="arrow prev" id="colPrev" aria-label="Назад">‹</button>
+      <div class="track-wrap"><div class="track" id="colTrack"></div></div>
+      <button class="arrow next" id="colNext" aria-label="Далі">›</button>
+    </div>
+    <div class="btn-row" style="justify-content:center"><a href="catalog.html" class="btn">Повний каталог</a></div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="insta">
+  <div class="container center">
+    <div class="eyebrow">Instagram</div>
+    <h2 class="title">Слідкуйте за нами в соцмережах.</h2>
+    <p class="lead">Дізнавайтеся першими про нові колекції та знижки!</p>
+  </div>
+  <div class="insta-track" id="instaTrack"></div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Навігація</h4>
+        <div class="links"><a href="#about">Про нас</a><a href="catalog.html">Каталог</a><a href="#collection">Колекція</a></div>
+      </div>
+      <div>
+        <a href="index.html" class="logo beige">Jólly.<small>HOUSE</small></a>
+        <p style="margin-top:26px">Jolly House — ваше місце для дизайнерського та зручного одягу на будь-яку нагоду. Ми використовуємо лише натуральні тканини та приділяємо велику увагу деталям.</p>
+      </div>
+      <div>
+        <h4>Соцмережі</h4>
+        <div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Twitter">t</a><a href="#" aria-label="YouTube">▶</a></div>
+        <div class="contact-list">
+          <div>5-та авеню, Нью-Йорк, США</div>
+          <div><a href="tel:+12125550123">+1 (212) 555-0123</a></div>
+          <div><a href="mailto:hello@jollyhouse.com">hello@jollyhouse.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2026 Jolly House. Усі права захищено.</div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/store.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
